@@ -19,5 +19,13 @@ Beberapa perintah yang bisa digunakan untuk admin adalah sebagai berikut:
 
 1. <code>/kick [username|mention]</code> - menendang seorang anggota dari grup
 2. <code>/ban [username|mention]</code> - memblokir seorang anggota dari grup
-3 <code>/unban [username|mention]</code> - membatalkan pemblokiran seorang anggota dari grup`
+3 <code>/unban [username|mention]</code> - membatalkan pemblokiran seorang anggota dari grup`,
+    pinChat: {
+        incorrectCmd: 'Gunakan perintah `/pin` dengan cara *reply* salah satu pesan yang ingin disematkan',
+        onlyInGroup: 'Perintah `/pin` untuk saat ini hanya dapat digunakan di dalam grup'
+    },
+    unpinChat: {
+        incorrectCmd: 'Gunakan perintah `/unpin` dengan cara *reply* salah satu pesan tersematkan',
+        onlyInGroup: 'Perintah `/unpin` untuk saat ini hanya dapat digunakan di dalam grup'
+    }
 }

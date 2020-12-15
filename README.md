@@ -28,8 +28,8 @@
 - [ ] `/warn` - memberikan peringatan kepada seorang anggota dari grup
 - [ ] `/kick` - menendang/mengeluarkan seorang anggota dari grup
 - [ ] `/greeting` - memberikan ucapan selamat bergabung kepada anggota grup baru
-- [ ] `/pin` - menyematkan sebuah pesan di grup
-- [ ] `/unpin` - melepas pesan sematan di grup
+- [x] `/pin` - menyematkan sebuah pesan di grup
+- [x] `/unpin` - melepas pesan sematan di grup
 - [ ] etc
 
 # License
