@@ -2,7 +2,7 @@
 
 **Octo Guard Bot** adalah bot administrator grup yang menggunakan Bot API Telegram.
 
-# Instalation
+# Installation
 
 ## System Requirements
 
