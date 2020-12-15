@@ -2,6 +2,10 @@ import { Telegraf, Context } from 'telegraf'
 import { checkGroup } from '../helpers/group'
 import { responseChat } from '../helpers/responseChat'
 
+/**
+ * Pin and unpin action
+ * @param bot 
+ */
 export function setupPin(bot: Telegraf<Context>) {
     bot.command('pin', (context) => {
         // Check reply message
