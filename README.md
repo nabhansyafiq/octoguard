@@ -34,7 +34,7 @@
 
 # License
 
-Apache License 2.0 - boleh untuk dikembangkan. Sertakanlah lisensi dan *copyright* pada program aslinya, dan dokumentasikanlah setiap perubahan yang Anda lakukan.
+[Apache License 2.0](https://github.com/arifai/octoguard/blob/master/LICENSE) - boleh untuk dikembangkan. Sertakanlah lisensi dan *copyright* pada program aslinya, dan dokumentasikanlah setiap perubahan yang Anda lakukan.
 
-<!-- Links -->
+<!-- Link -->
 [BotFather]: https://t.me/botfather
