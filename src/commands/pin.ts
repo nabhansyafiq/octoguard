@@ -11,7 +11,7 @@ export function setupPin(bot: Telegraf<Context>) {
         // Check reply message
         const incorrectCmd = responseChat.pinChat.incorrectCmd
         const msg = context.message
-        if (!msg || !msg?.reply_to_message)
+        if (!msg || !msg?.reply_to_message?.message_id)
             return context.reply(incorrectCmd, { parse_mode: 'MarkdownV2' })
 
         // Check is not group

@@ -30,6 +30,7 @@
 - [ ] `/greeting` - memberikan ucapan selamat bergabung kepada anggota grup baru
 - [x] `/pin` - menyematkan sebuah pesan di grup
 - [x] `/unpin` - melepas pesan sematan di grup
+- [x] `/leave` - mengeluarkan bot dari grup (hanya *creator* dan *administrator*)
 - [ ] etc
 
 # License
