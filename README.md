@@ -2,16 +2,6 @@
 
 **Octo Guard Bot** adalah bot administrator grup yang menggunakan Bot API Telegram.
 
-# TODO
-
-- [ ] `/ban` - memblokir/melarang seorang anggota dari grup
-- [ ] `/warn` - memberikan peringatan kepada seorang anggota dari grup
-- [ ] `/kick` - menendang/mengeluarkan seorang anggota dari grup
-- [ ] `/greeting` - memberikan ucapan selamat bergabung kepada anggota grup baru
-- [ ] `/pin` - menyematkan sebuah pesan di grup
-- [ ] `/unpin` - melepas pesan sematan di grup
-- [ ] etc
-
 # Instalation
 
 ## System Requirements
@@ -30,7 +20,17 @@
 ## Environment Variables
 
 - `BOT_TOKEN` - Telegram bot token. Jika belum punya, silahkan buat terlebih dahulu di [BotFather]
-- `BOT_USERNAME` - Telegram bot username, tanpa menggunakan karakter (@) diawal
+- `BOT_USERNAME` - Telegram bot username, tanpa diawali dengan karakter (@)
+
+# TODO
+
+- [ ] `/ban` - memblokir/melarang seorang anggota dari grup
+- [ ] `/warn` - memberikan peringatan kepada seorang anggota dari grup
+- [ ] `/kick` - menendang/mengeluarkan seorang anggota dari grup
+- [ ] `/greeting` - memberikan ucapan selamat bergabung kepada anggota grup baru
+- [ ] `/pin` - menyematkan sebuah pesan di grup
+- [ ] `/unpin` - melepas pesan sematan di grup
+- [ ] etc
 
 # License
 
