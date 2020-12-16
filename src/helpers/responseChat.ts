@@ -31,5 +31,6 @@ Beberapa perintah yang bisa digunakan untuk admin adalah sebagai berikut:
     leaveChat: {
         onlyInGroup: 'Perintah `/leave` untuk saat ini hanya dapat digunakan di dalam grup'
     },
-    checkAdminBot: 'Maaf 😞, Saya tidak bisa melakukan perintah yang Anda inginkan, karena Saya bukan admin. Jadikan Saya sebagai admin agar Anda bisa melakukan beberapa perintah kepada Saya.'
+    checkAdminBot: `Maaf 😞, Saya tidak bisa melakukan perintah yang Anda inginkan, karena Saya bukan admin
+Jadikan Saya sebagai admin agar Anda bisa melakukan beberapa perintah kepada Saya`
 }

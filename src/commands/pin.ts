@@ -1,4 +1,5 @@
 import { Telegraf, Context } from 'telegraf'
+import { checkAdminBot } from '../helpers/admin'
 import { checkGroup } from '../helpers/group'
 import { responseChat } from '../helpers/responseChat'
 
@@ -7,11 +8,11 @@ import { responseChat } from '../helpers/responseChat'
  * @param bot 
  */
 export function setupPin(bot: Telegraf<Context>) {
-    bot.command('pin', (context) => {
+    bot.command('pin', async (context) => {
         // Check reply message
         const incorrectCmd = responseChat.pinChat.incorrectCmd
         const msg = context.message
-        if (!msg || !msg?.reply_to_message?.message_id)
+        if (!msg || !msg?.reply_to_message)
             return context.reply(incorrectCmd, { parse_mode: 'MarkdownV2' })
 
         // Check is not group
@@ -19,10 +20,13 @@ export function setupPin(bot: Telegraf<Context>) {
         if (!checkGroup(context))
             return context.reply(inGroup, { parse_mode: 'MarkdownV2' })
 
-        return context.pinChatMessage(msg.reply_to_message.message_id, { disable_notification: false })
+        if (await checkAdminBot(context))
+            return context.pinChatMessage(msg.reply_to_message.message_id, { disable_notification: false })
+
+        return context.reply(responseChat.checkAdminBot, { parse_mode: 'MarkdownV2' })
     })
 
-    bot.command('unpin', (context) => {
+    bot.command('unpin', async (context) => {
         // Check reply chat
         const incorrectCmd = responseChat.unpinChat.incorrectCmd
         if (!context.message?.reply_to_message)
@@ -33,6 +37,9 @@ export function setupPin(bot: Telegraf<Context>) {
         if (!checkGroup(context))
             return context.reply(inGroup, { parse_mode: 'MarkdownV2' })
 
-        return context.unpinChatMessage()
+        if (await checkAdminBot(context))
+            return context.unpinChatMessage()
+
+        return context.reply(responseChat.checkAdminBot, { parse_mode: 'MarkdownV2' })
     })
 }
