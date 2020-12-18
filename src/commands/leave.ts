@@ -9,7 +9,7 @@ import { responseChat } from '../helpers/responseChat'
  */
 export function setupLeave(bot: Telegraf<Context>) {
     bot.command('leave', async (context) => {
-        if (await checkAdmin(context))
+        if (await checkAdmin(context, 'user'))
             return context.leaveChat()
         else if (!checkGroup(context))
             return context.reply(responseChat.leaveChat.onlyInGroup, { parse_mode: 'MarkdownV2' })

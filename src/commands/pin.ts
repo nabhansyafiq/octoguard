@@ -1,5 +1,5 @@
 import { Telegraf, Context } from 'telegraf'
-import { checkAdminBot } from '../helpers/admin'
+import { checkAdmin } from '../helpers/admin'
 import { checkGroup } from '../helpers/group'
 import { responseChat } from '../helpers/responseChat'
 
@@ -20,7 +20,7 @@ export function setupPin(bot: Telegraf<Context>) {
         if (!checkGroup(context))
             return context.reply(inGroup, { parse_mode: 'MarkdownV2' })
 
-        if (await checkAdminBot(context))
+        if (await checkAdmin(context, 'bot'))
             return context.pinChatMessage(msg.reply_to_message.message_id, { disable_notification: false })
 
         return context.reply(responseChat.checkAdminBot, { parse_mode: 'MarkdownV2' })
@@ -37,7 +37,7 @@ export function setupPin(bot: Telegraf<Context>) {
         if (!checkGroup(context))
             return context.reply(inGroup, { parse_mode: 'MarkdownV2' })
 
-        if (await checkAdminBot(context))
+        if (await checkAdmin(context, 'bot'))
             return context.unpinChatMessage()
 
         return context.reply(responseChat.checkAdminBot, { parse_mode: 'MarkdownV2' })

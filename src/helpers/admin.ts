@@ -1,22 +1,17 @@
 import { Context } from 'telegraf'
 
 /**
- * Check member status is creator or administrator
+ * Check user or bot roles
  * @param context 
+ * @param type `bot` | `user`
  */
-export async function checkAdmin(context: Context) {
-    const getAdmins = await context.getChatAdministrators()
-    const admin = getAdmins.find((val) => val.user.id === context.from?.id)
+export async function checkAdmin(context: Context, type: 'bot' | 'user'): Promise<boolean | undefined> {
+    const roles = ['creator', 'administrator']
+    const bot = await context.getChatMember(context.botInfo?.id!)
+    const admin = await context.getChatMember(context.from?.id!)
 
-    return ['creator', 'administrator'].includes(admin?.status!) || admin?.can_restrict_members
-}
+    if (type === 'bot')
+        return roles.includes(bot.status) || bot.can_restrict_members
 
-/**
- * Check bot status is administrator
- * @param context 
- */
-export async function checkAdminBot(context: Context) {
-    const adminBot = await context.getChatMember(context.botInfo?.id!)
-
-    return adminBot.status === 'administrator' || adminBot.can_restrict_members
+    return roles.includes(admin.status) || admin.can_restrict_members
 }
