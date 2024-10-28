@@ -2,9 +2,7 @@
  * Kumpulan response chat untuk bot
  */
 export const responseChat = {
-    startChat: `Hai salam kenal, Saya <b>Octo Guard</b> 🐙!
-
-Saya adalah bot <b>administrator</b> grup yang menggunakan Bot API Telegram. Saya dapat melakukan banyak hal seperti berikut:
+    startChat: `Hai salam kenal, Saya <b>Mercynoahh</b> 🔖!
     
 1. Saya bisa <b>menendang</b> ataupun <b>memblokir</b> anggota dari grup
 2. Saya bisa <b>menyapa</b> anggota yang baru bergabung dengan pesan yang bisa Anda kustomisasi
